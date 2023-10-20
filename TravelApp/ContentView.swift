@@ -112,42 +112,34 @@ struct TagView: View {
         var text: String
     var body: some View {
         if (text == "Rec"){
-                Text(text)
+            Text(text)
+                .background(Capsule().fill(Color.pink).frame(width: 60, height: 80))
             .font(.caption)
+        
             .padding(.horizontal, 10)
             .padding(.vertical, 5)
             .cornerRadius(15)
-            .overlay(
-                RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.gray, lineWidth: 1)
-            )
-            .background(.pink)
+            
 
         }
         else if (text == "Itinerary") {
             Text(text)
-                .font(.caption)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 5)
-                .cornerRadius(15)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.gray, lineWidth: 1)
-                )
-                .background(.green)
+                .background(Capsule().fill(Color.green).frame(width: 60, height: 80))
+            .font(.caption)
+        
+            .padding(.horizontal, 10)
+            .padding(.vertical, 5)
+            .cornerRadius(15)
 
         }
         else {
                 Text(text)
-                    .font(.caption)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 5)
-                    .cornerRadius(15)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .background(.gray)
+                .background(Capsule().fill(Color.gray).frame(width: 90, height: 80))
+            .font(.caption)
+        
+            .padding(.horizontal, 10)
+            .padding(.vertical, 5)
+            .cornerRadius(15)
             }
         }
 }
